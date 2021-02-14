@@ -1,0 +1,120 @@
+body {
+    margin: 0 !important;
+}
+
+a {
+    color: #269930;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, .2);
+    color: #269930;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.header nav a {
+    color: #7d7d7d;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 20px 0 0;
+}
+
+.body {
+    margin: 10px auto;
+    text-align: center;
+}
+
+.footer {
+    margin: auto;
+    min-height: 50px;
+}
+
+.users .users-count {
+    font-size: 24px;
+    font-weight: bold;
+    color: #269930;
+}
+
+.users-search input {
+    font-size: 20px;
+}
+
+.users-search, .pagination {
+    display: inline;
+}
+
+.pagination button {
+    font-size: 20px;
+}
+
+.repos .repos-count {
+    font-size: 24px;
+    font-weight: bold;
+    color: #269930;
+}
+
+.repos-search input {
+    font-size: 20px;
+}
+
+.repos-search, .pagination {
+    display: inline;
+}
+
+.single-repo {
+    width: 30%;
+    margin: 10px;
+    border: 2px solid #cccccc;
+    border-radius: 4px;
+}
+
+.single-user-info {
+    display: flex;
+}
+
+.information ul {
+    text-align: left;
+}
+
+.information ul li {
+    list-style: none;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.user-repos {
+    padding: 10px;
+    text-align: left;
+}
+
+.repo-info {
+    text-align: left;
+    border: 2px solid #cccccc;
+    border-radius: 4px;
+    padding: 0 20px;
+
+    margin-bottom: 10px;
+}
+
+.single-user img {
+    width: 100%;
+}
+
+.user-info {
+    width: 20%;
+    display: inline-block;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.user-info img {
+    width: 50%;
+    border-radius: 50%;
+}
