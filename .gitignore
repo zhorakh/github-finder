@@ -1,5 +1,7 @@
-./node_modules
+# Dependency directories
+node_modules/
 
-./dist
+dist/
 
-./vscode
+# Editor files
+.idea
