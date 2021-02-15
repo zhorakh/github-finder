@@ -1,26 +1,13 @@
 import {RenderNode} from "../../components/renderNode";
+import {SearchNode} from "../../components/searchNode";
+import {NoResultsNode} from "../../components/noResultsNode";
 
 class Template {
 
     static init() {
-        const template = Template.headerBodyTemplate();
+        const nodeName = "user-search";
+        const template = SearchNode(nodeName);
         RenderNode(template, "header-body");
-    }
-
-    static headerBodyTemplate() {
-        return `
-            <div class="users-search">
-                <input type="text" class="user-search-input" name="user-search" value="" placeholder="Search users...">
-            </div>
-            <div class="pagination">
-                <button class="preview-users">Preview</button>
-                <button class="next-users">Next</button>
-            </div>
-        `;
-    }
-
-    static noUsersTemplate() {
-        return `<h1>No Users</h1>`;
     }
 
     static userTemplate(user) {
@@ -47,8 +34,9 @@ class Template {
         if (users.items && users.items.length) {
             const template = Template.usersTemplate(users);
             RenderNode(template, "content");
-        } else {
-            const template = Template.noUsersTemplate();
+        } else if(users.items && !users.items.length) {
+            const nodeName = "Users"
+            const template = NoResultsNode(nodeName);
             RenderNode(template, "content");
         }
     }

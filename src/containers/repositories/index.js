@@ -8,9 +8,9 @@ class Repositories {
         Template.render();
         this.page = 1;
         this.serchValue = "";
-        const previewButton = document.getElementsByClassName('preview-repos')[0];
-        const nextButton = document.getElementsByClassName('next-repos')[0];
-        const searchInput = document.getElementsByClassName('repo-search-input')[0];
+        const previewButton = document.getElementsByClassName('preview-page')[0];
+        const nextButton = document.getElementsByClassName('next-page')[0];
+        const searchInput = document.getElementsByClassName('search-input')[0];
 
         searchInput.addEventListener("keyup", this.getRepos.bind(this));
 

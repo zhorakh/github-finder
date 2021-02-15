@@ -1,26 +1,13 @@
 import {RenderNode} from "../../components/renderNode";
+import {SearchNode} from "../../components/searchNode";
+import {NoResultsNode} from "../../components/noResultsNode";
 
 class Template {
 
     static init() {
-        const template = Template.headerBodyTemplate();
+        const nodeName = "repo-search";
+        const template = SearchNode(nodeName);
         RenderNode(template, "header-body");
-    }
-
-    static headerBodyTemplate() {
-        return `
-            <div class="repos-search">
-                <input type="text" class="repo-search-input" name="repo-search" value="" placeholder="Search Repositories...">
-            </div>
-            <div class="pagination">
-                <button class="preview-repos">Preview</button>
-                <button class="next-repos">Next</button>
-            </div>  
-        `;
-    }
-
-    static noReposTemplate() {
-        return `<h1>No Repositories</h1>`;
     }
 
     static repoTemplate(repo) {
@@ -47,8 +34,9 @@ class Template {
         if (repos.items && repos.items.length) {
             const template = Template.reposTemplate(repos);
             RenderNode(template, "content");
-        } else {
-            const template = Template.noReposTemplate();
+        } else if (repos.items && !repos.items.length) {
+            const nodeName = "Repositories"
+            const template = NoResultsNode(nodeName);
             RenderNode(template, "content");
         }
     }

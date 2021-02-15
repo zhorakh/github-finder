@@ -8,9 +8,9 @@ class Users {
         Template.render();
         this.page = 1;
         this.serchValue = "";
-        const previewButton = document.getElementsByClassName('preview-users')[0];
-        const nextButton = document.getElementsByClassName('next-users')[0];
-        const searchInput = document.getElementsByClassName('user-search-input')[0];
+        const previewButton = document.getElementsByClassName('preview-page')[0];
+        const nextButton = document.getElementsByClassName('next-page')[0];
+        const searchInput = document.getElementsByClassName('search-input')[0];
 
         searchInput.addEventListener("keyup", this.getUsers.bind(this));
 

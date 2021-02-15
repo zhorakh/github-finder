@@ -1,0 +1,1 @@
+export const NoResultsNode = (name) => `<div>No ${name}</div>`;
